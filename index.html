@@ -787,9 +787,9 @@ body {
         <li>
           <div class="step-body">
             <p><strong>Create a private storage space</strong> for your photos. Click the link below, then just click the green <strong>"Create repository"</strong> button &mdash; don't change any settings.</p>
-            <a class="step-link" href="https://github.com/new?name=my-photos&visibility=private&auto_init=true" target="_blank" rel="noopener">
+            <a class="step-link" href="https://github.com/new?name=myphotos&visibility=private&auto_init=true" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Create "my-photos" storage
+              Create "myphotos" storage
             </a>
           </div>
         </li>
@@ -956,7 +956,7 @@ body {
 // ========================================
 // State
 // ========================================
-const REPO_NAME = 'my-photos';
+const REPO_NAME = 'myphotos';
 const UPLOAD_FOLDER = 'photos';
 const ACCEPTED = new Set(['image/jpeg','image/png','image/webp','image/gif']);
 
@@ -996,7 +996,7 @@ function friendlyError(status, body) {
     if (msg.includes('rate limit')) return 'GitHub is asking us to slow down. Try again in a minute.';
     return "Your secret key doesn't have permission to do this. Try generating a new one.";
   }
-  if (status === 404) return "Couldn't find your photo storage. Make sure you created the \"my-photos\" repository.";
+  if (status === 404) return "Couldn't find your photo storage. Make sure you created the \"myphotos\" repository.";
   if (status === 409) return "There was a conflict. Try refreshing and doing that again.";
   if (status === 422) {
     if (msg.includes('sha') || msg.includes('does not match')) return 'This photo was changed elsewhere. Refresh and try again.';
@@ -1168,7 +1168,7 @@ $('#verifyBtn').onclick = async () => {
       });
     } catch (e2) {
       $('#usernameMsg').className = 'field-message error';
-      $('#usernameMsg').textContent = "Couldn't find or create the \"my-photos\" repository. Make sure you created it in step 2 above.";
+      $('#usernameMsg').textContent = "Couldn't find or create the \"myphotos\" repository. Make sure you created it in step 2 above.";
       btn.disabled = false;
       btn.textContent = 'Verify & Continue';
       return;
@@ -1230,7 +1230,7 @@ document.addEventListener('paste', (e) => {
         // Pasted images often have generic names like "image.png" — give them a timestamp name
         const ext = file.type.split('/')[1].replace('jpeg', 'jpg');
         const ts = new Date().toISOString().replace(/[:T]/g, '-').replace(/\..+/, '');
-        const named = new File([file], `photo-${ts}-${files.length + 1}.${ext}`, { type: file.type });
+        const named = new File([file], `photo_${ts}_${files.length + 1}.${ext}`, { type: file.type });
         files.push(named);
       }
     }

@@ -28,7 +28,7 @@ That's it. No install, no server, no build step.
 
 | | |
 |---|---|
-| **Storage** | GitHub Contents API (`PUT`/`GET`/`DELETE` on `/repos/{owner}/my-photos/contents/photos/`) |
+| **Storage** | GitHub Contents API (`PUT`/`GET`/`DELETE` on `/repos/{owner}/myphotos/contents/photos/`) |
 | **Auth** | GitHub personal access token with `repo` scope, sent via `Authorization: Bearer` header |
 | **Upload** | Files are read as base64 via `FileReader` and pushed with a commit message |
 | **Delete** | Uses the file's SHA from the listing response |
