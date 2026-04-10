@@ -1,6 +1,6 @@
 # My Photos
 
-A personal photo archive that stores your images on GitHub — no backend, no accounts beyond GitHub, no dependencies.
+A personal photo archive that stores your images on GitHub. No backend, no accounts beyond GitHub, no dependencies.
 
 ## How it works
 
@@ -9,20 +9,21 @@ Everything runs from a single `index.html` file opened in your browser. Photos a
 ## Getting started
 
 1. Open `index.html` in any modern browser
-2. Follow the onboarding wizard — it walks you through creating a GitHub account, a private repo, and a personal access token
+2. Follow the onboarding wizard, which walks you through creating a GitHub account, a private repo, and a personal access token
 3. Start uploading photos
 
 That's it. No install, no server, no build step.
 
 ## Features
 
-- **Guided setup** — step-by-step onboarding designed for non-technical users
-- **Drag-and-drop upload** — supports JPG, PNG, WEBP, and GIF with per-file progress bars
-- **Gallery view** — responsive grid with lazy-loaded images
-- **Lightbox** — click any photo to view fullscreen, download, or delete
-- **Plain-English errors** — no status codes or API jargon shown to the user
-- **Offline credentials** — token and username stored in `localStorage`, never sent to any third party
-- **Zero dependencies** — vanilla HTML, CSS, and JS in a single file
+- **Guided setup**: onboarding designed for nontechnical users
+- **Upload by drag and drop**: supports JPG, PNG, WEBP, and GIF with progress bars for each file
+- **Paste from clipboard**: copy photos in the macOS Photos app and press Cmd+V
+- **Gallery view**: responsive grid with lazy loaded images
+- **Lightbox**: click any photo to view fullscreen, download, or delete
+- **Plain English errors**: no status codes or API jargon shown to the user
+- **Offline credentials**: token and username stored in `localStorage`, never sent to any third party
+- **Zero dependencies**: vanilla HTML, CSS, and JS in a single file
 
 ## Tech details
 
@@ -36,7 +37,7 @@ That's it. No install, no server, no build step.
 
 ## Limitations
 
-- GitHub API has a [rate limit](https://docs.github.com/en/rest/rate-limit) of 5,000 requests/hour for authenticated users
+- GitHub API has a [rate limit](https://docs.github.com/en/rest/rate-limit) of 5,000 requests per hour for authenticated users
 - Individual file uploads are limited to 100 MB via the Contents API
 - The listing endpoint returns up to 1,000 files per directory
 - Images are served from `raw.githubusercontent.com` which may be slow for very large files
