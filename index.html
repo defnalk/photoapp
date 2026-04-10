@@ -771,7 +771,7 @@ body {
       <p class="subtitle">Your personal photo archive, stored for free on GitHub.</p>
 
       <p style="color:var(--text2);font-size:14px;margin-bottom:24px;">
-        We'll use GitHub (a trusted service used by millions) to safely store your photos in a private space only you can see. Here's how to set it up &mdash; it only takes a minute:
+        We'll use GitHub (a trusted service used by millions) to safely store your photos in a private space only you can see. Here's how to set it up. It only takes a minute:
       </p>
 
       <ol class="instructions">
@@ -786,7 +786,7 @@ body {
         </li>
         <li>
           <div class="step-body">
-            <p><strong>Create a private storage space</strong> for your photos. Click the link below, then just click the green <strong>"Create repository"</strong> button &mdash; don't change any settings.</p>
+            <p><strong>Create a private storage space</strong> for your photos. Click the link below, then just click the green <strong>"Create repository"</strong> button. Don't change any settings.</p>
             <a class="step-link" href="https://github.com/new?name=myphotos&visibility=private&auto_init=true" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               Create "myphotos" storage
@@ -820,7 +820,7 @@ body {
 
       <div class="field">
         <label>Your secret key (token)</label>
-        <p class="helper">The code you just copied &mdash; starts with ghp_</p>
+        <p class="helper">The code you just copied. Starts with ghp_</p>
         <div class="input-wrap">
           <input type="password" id="tokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" spellcheck="false">
           <span class="input-icon" id="tokenIcon"></span>
@@ -1250,7 +1250,7 @@ function handleFiles(files) {
     return;
   }
   if (valid.length < files.length) {
-    toast(`${files.length - valid.length} file(s) skipped — only JPG, PNG, WEBP, and GIF are supported.`, 'error');
+    toast(`${files.length - valid.length} file(s) skipped. Only JPG, PNG, WEBP, and GIF are supported.`, 'error');
   }
   valid.forEach(uploadFile);
 }
